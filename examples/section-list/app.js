@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import { SectionList } from '../../';
+import SectionList from './src/section-list';
 
 import { groupBy } from 'lodash/fp';
 
@@ -64,8 +64,8 @@ export default class App extends Component<{}> {
           onEndReachedThreshold={20}
           sections={this.state.sections}
           stickySectionHeadersEnabled={false}
-          style={styles.list}
-          // contentContainerStyle={style}
+          // style={styles.list}
+          contentContainerStyle={styles}
           scrollEventThrottle={16}
           renderSectionHeader={({ section }) => {
             return <HeaderItem title={section.title} />;
